@@ -3,36 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Homes</title>
+    <title>Dream Homes Realty</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo-container">
-                <img src="logo.png" alt="Real Estate Agency Logo" id="logo">
+                <img src="logo.png" alt="Dream Homes Realty Logo" id="logo">
                 <span class="company-name">Dream Homes Realty</span>
             </div>
-            <nav>
+            <nav class="desktop-nav">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#properties">Properties</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#properties"><i class="fas fa-building"></i> Properties</a></li>
+                    <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
             </nav>
-            <button class="cta-button">Schedule a Consultation</button>
+            <button class="cta-button"><i class="far fa-calendar-alt"></i> Schedule a Consultation</button>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#properties"><i class="fas fa-building"></i> Properties</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="hero">
+    <section id="hero" class="parallax-section">
         <div class="container">
             <div class="hero-content">
-                <h1>Find Your Dream Home With Us</h1>
+                <h1><span class="highlight">Find</span> Your Dream Home With Us</h1>
                 <p>We offer a curated selection of premium properties and provide expert guidance throughout your buying or selling journey.</p>
                 <div class="search-bar">
+                    <div class="search-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
                     <input type="text" placeholder="Search by location, property type, etc.">
                     <button>Search</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="num">500+</span>
+                        <span class="label">Properties</span>
+                    </div>
+                    <div class="stat">
+                        <span class="num">15+</span>
+                        <span class="label">Years</span>
+                    </div>
+                    <div class="stat">
+                        <span class="num">1000+</span>
+                        <span class="label">Happy Clients</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -40,60 +74,150 @@
 
     <main>
         <section id="featured-properties" class="container">
-            <h2>Featured Properties</h2>
+            <h2>Featured <span class="highlight">Properties</span></h2>
             <div class="property-listings">
                 <!-- Property 1 -->
                 <div class="property-card">
-                    <img src="property1.jpg" alt="Property 1">
-                    <h3>Modern Villa in Suburbs</h3>
-                    <p>4 Beds | 3 Baths | 2,500 sq ft</p>
-                    <p class="price">$1,200,000</p>
+                    <div class="property-image">
+                        <img src="property1.jpg" alt="Property 1">
+                        <div class="property-tag">Featured</div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Modern Villa in Suburbs</h3>
+                        <div class="property-location"><i class="fas fa-map-marker-alt"></i> Central District</div>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 4 Beds</span>
+                            <span><i class="fas fa-bath"></i> 3 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 2,500 sq ft</span>
+                        </div>
+                        <p class="price">$1,200,000</p>
+                        <a href="#" class="property-btn">View Details</a>
+                    </div>
                 </div>
                 <!-- Property 2 -->
                 <div class="property-card">
-                    <img src="property2.jpg" alt="Property 2">
-                    <h3>Downtown Luxury Condo</h3>
-                    <p>2 Beds | 2 Baths | 1,500 sq ft</p>
-                    <p class="price">$850,000</p>
+                    <div class="property-image">
+                        <img src="property2.jpg" alt="Property 2">
+                        <div class="property-tag">New</div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Downtown Luxury Condo</h3>
+                        <div class="property-location"><i class="fas fa-map-marker-alt"></i> Downtown</div>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 2 Beds</span>
+                            <span><i class="fas fa-bath"></i> 2 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 1,500 sq ft</span>
+                        </div>
+                        <p class="price">$850,000</p>
+                        <a href="#" class="property-btn">View Details</a>
+                    </div>
                 </div>
                 <!-- Property 3 -->
                 <div class="property-card">
-                    <img src="property3.jpg" alt="Property 3">
-                    <h3>Cozy Suburban House</h3>
-                    <p>3 Beds | 2.5 Baths | 1,800 sq ft</p>
-                    <p class="price">$750,000</p>
+                    <div class="property-image">
+                        <img src="property3.jpg" alt="Property 3">
+                        <div class="property-tag">Hot Deal</div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Cozy Suburban House</h3>
+                        <div class="property-location"><i class="fas fa-map-marker-alt"></i> Suburban Area</div>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 3 Beds</span>
+                            <span><i class="fas fa-bath"></i> 2.5 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 1,800 sq ft</span>
+                        </div>
+                        <p class="price">$750,000</p>
+                        <a href="#" class="property-btn">View Details</a>
+                    </div>
                 </div>
+            </div>
+            <div class="text-center">
+                <a href="#" class="view-all-btn">View All Properties</a>
             </div>
         </section>
 
         <section id="key-benefits" class="container">
-            <h2>Why Choose Us?</h2>
-            <ul>
-                <li>Expert market knowledge and insights.</li>
-                <li>Personalized service tailored to your needs.</li>
-                <li>Extensive network of buyers and sellers.</li>
-                <li>Seamless and transparent transaction process.</li>
-            </ul>
+            <h2>Why <span class="highlight">Choose Us</span>?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-star benefit-icon"></i>
+                    <h3>Expert Market Knowledge</h3>
+                    <p>Our team has in-depth knowledge of local markets and the latest real estate trends.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-hands-helping benefit-icon"></i>
+                    <h3>Personalized Service</h3>
+                    <p>We provide tailored services based on your unique needs and preferences.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-network-wired benefit-icon"></i>
+                    <h3>Extensive Network</h3>
+                    <p>Access our wide network of potential buyers, sellers, and industry professionals.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-shield-alt benefit-icon"></i>
+                    <h3>Transparent Process</h3>
+                    <p>Experience a seamless and transparent transaction process from start to finish.</p>
+                </div>
+            </div>
         </section>
 
         <section id="about-us-brief" class="container">
-            <h2>About Us</h2>
-            <p>Dream Homes Realty has been serving the community for over 15 years, committed to helping clients achieve their real estate goals with integrity and professionalism. We believe in building lasting relationships.</p>
+            <h2>About <span class="highlight">Us</span></h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="about-image.jpg" alt="Our Team">
+                </div>
+                <div class="about-text">
+                    <p>Dream Homes Realty has been serving the community for over 15 years, committed to helping clients achieve their real estate goals with integrity and professionalism.</p>
+                    <p>We believe in building lasting relationships and providing exceptional service at every step of your real estate journey.</p>
+                    <a href="#" class="learn-more-btn">Learn More About Us</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="container">
+            <h2>Client <span class="highlight">Testimonials</span></h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="quote"><i class="fas fa-quote-left"></i></div>
+                    <p>Dream Homes Realty helped me find the perfect home for my family. Their attention to detail and personalized service made all the difference.</p>
+                    <div class="client-info">
+                        <div class="client-name">Sarah Johnson</div>
+                        <div class="client-role">Homebuyer</div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
+    <footer id="contact">
         <div class="container">
-            <div class="contact-info">
-                <p>Phone: (123) 456-7890</p>
-                <p>Email: info@dreamhomes.com</p>
-                <p>Address: 123 Main Street, Anytown, USA</p>
-            </div>
-            <div class="social-media">
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
-                <a href="#">LinkedIn</a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@dreamhomes.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, Anytown, USA</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#properties">Properties</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
             </div>
             <div class="legal-info">
                 <p>&copy; 2024 Dream Homes Realty. All rights reserved.</p>
@@ -101,6 +225,10 @@
             </div>
         </div>
     </footer>
+
+    <a href="#" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
 
     <script src="script.js"></script>
 </body>
